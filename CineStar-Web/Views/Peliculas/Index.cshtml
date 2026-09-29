@@ -1,0 +1,24 @@
+@model List<Pelicula>
+
+<br /><h1>@ViewBag.Titulo</h1><br />
+@foreach (var p in Model)
+{
+    <div class="contenido-pelicula">
+        <div class="datos-pelicula">
+            <h2>@p.Titulo</h2><br />
+            <p>@p.SinopsisCorta</p>
+            <br />
+            <div class="boton-pelicula">
+                <a asp-controller="Peliculas" asp-action="Detalle" asp-route-id="@p.Id">
+                    <img src="~/img/varios/btn-mas-info.jpg" width="120" height="30" alt="Ver info" />
+                </a>
+            </div>
+            <div class="boton-pelicula">
+                <a href="https://www.youtube.com/watch?v=@p.Link" target="_blank">
+                    <img src="~/img/varios/btn-trailer.jpg" width="120" height="30" alt="Ver trailer" />
+                </a>
+            </div>
+        </div>
+        <img src="~/img/pelicula/@(p.Id).jpg" width="160" height="226" /><br /><br />
+    </div>
+}

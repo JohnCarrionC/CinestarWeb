@@ -1,0 +1,17 @@
+@model List<Cine>
+
+<br /><h1>Nuestros Cines</h1><br />
+@foreach (var c in Model)
+{
+    <div class="contenido-cine">
+        <img src="~/img/cine/@(c.Id).1.jpg" width="227" height="170" />
+        <div class="datos-cine">
+            <h4>@c.NombreCorto</h4><br />
+            <span>@c.Direccion - @c.Distrito<br /><br />Teléfono: @c.Telefonos</span>
+        </div>
+        <br />
+        <a asp-controller="Cines" asp-action="Detalle" asp-route-id="@c.Id">
+            <img src="~/img/varios/ico-info2.png" width="150" height="40" />
+        </a>
+    </div>
+}

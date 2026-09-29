@@ -1,0 +1,8 @@
+Proyecto: CineStar (ASP.NET Core MVC + SQL Server)
+
+Repositorio Git:
+https://github.com/TU-USUARIO/cinestar
+
+Publicacion: pendiente. No se pudo publicar en Azure ni en SmarterASP
+por problemas de acceso. El script de la base de datos esta en
+CineStar_SQL_Hosting.sql.

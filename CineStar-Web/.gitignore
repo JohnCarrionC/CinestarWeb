@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+publish/
+# Contiene la contraseña de la BD: NO subir a git
+appsettings.Local.json
